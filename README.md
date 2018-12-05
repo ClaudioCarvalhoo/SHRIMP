@@ -3,6 +3,11 @@ Simple, Helpful, Reliable and Intelligent Mushroom Picker
 
 ---------------------------------------------------------------------------
 
+## Weka
+https://www.cs.waikato.ac.nz/ml/weka/
+
+---------------------------------------------------------------------------
+
 ## Mushroom Data Set
 1. Title: Mushroom Database
 
