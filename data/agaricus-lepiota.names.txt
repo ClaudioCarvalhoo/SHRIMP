@@ -1,9 +1,3 @@
-# SHRIMP
-Simple, Helpful, Reliable and Intelligent Mushroom Picker
-
----------------------------------------------------------------------------
-
-## Mushroom Data Set
 1. Title: Mushroom Database
 
 2. Sources: 
