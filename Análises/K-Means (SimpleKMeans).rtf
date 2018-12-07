@@ -1,0 +1,109 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 === Run information ===\
+\
+Scheme:       weka.clusterers.SimpleKMeans -init 0 -max-candidates 100 -periodic-pruning 10000 -min-density 2.0 -t1 -1.25 -t2 -1.0 -N 2 -A "weka.core.EuclideanDistance -R first-last" -I 500 -num-slots 1 -S 10\
+Relation:     agaricus-lepiota-weka.filters.unsupervised.attribute.Reorder-R2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,1\
+Instances:    8124\
+Attributes:   23\
+              cap-shape\
+              cap-surface\
+              cap-color\
+              bruises?\
+              odor\
+              gill-attachment\
+              gill-spacing\
+              gill-size\
+              gill-color\
+              stalk-shape\
+              stalk-root\
+              stalk-surface-above-ring\
+              stalk-surface-below-ring\
+              stalk-color-above-ring\
+              stalk-color-below-ring\
+              veil-type\
+              veil-color\
+              ring-number\
+              ring-type\
+              spore-print-color\
+              population\
+              habitat\
+Ignored:\
+              class\
+Test mode:    Classes to clusters evaluation on training data\
+\
+=== Clustering model (full training set) ===\
+\
+\
+kMeans\
+======\
+\
+Number of iterations: 5\
+Within cluster sum of squared errors: 62605.0\
+\
+Initial starting points (random):\
+\
+Cluster 0: k,s,p,t,n,f,c,b,w,e,b,s,s,e,w,p,w,t,e,w,c,w\
+Cluster 1: x,y,b,t,n,f,c,b,w,e,b,s,s,w,e,p,w,t,e,w,c,w\
+\
+Missing values globally replaced with mean/mode\
+\
+Final cluster centroids:\
+                                        Cluster#\
+Attribute                   Full Data          0          1\
+                             (8124.0)   (3327.0)   (4797.0)\
+===========================================================\
+cap-shape                           x          f          x\
+cap-surface                         y          s          y\
+cap-color                           n          n          g\
+bruises?                            f          f          t\
+odor                                n          n          n\
+gill-attachment                     f          f          f\
+gill-spacing                        c          c          c\
+gill-size                           b          n          b\
+gill-color                          b          b          p\
+stalk-shape                         t          t          e\
+stalk-root                          b          b          b\
+stalk-surface-above-ring            s          s          s\
+stalk-surface-below-ring            s          s          s\
+stalk-color-above-ring              w          w          w\
+stalk-color-below-ring              w          w          w\
+veil-type                           p          p          p\
+veil-color                          w          w          w\
+ring-number                         o          o          o\
+ring-type                           p          e          p\
+spore-print-color                   w          w          n\
+population                          v          v          v\
+habitat                             d          g          d\
+\
+\
+\
+\
+Time taken to build model (full training data) : 0.07 seconds\
+\
+=== Model and evaluation on training set ===\
+\
+Clustered Instances\
+\
+0      3327 ( 41%)\
+1      4797 ( 59%)\
+\
+\
+Class attribute: class\
+Classes to Clusters:\
+\
+    0    1  <-- assigned to cluster\
+ 2093 1823 | p\
+ 1234 2974 | e\
+\
+Cluster 0 <-- p\
+Cluster 1 <-- e\
+\
+Incorrectly clustered instances :	3057.0	 37.6292 %\
+\
+}

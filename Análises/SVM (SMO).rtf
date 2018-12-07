@@ -1,0 +1,195 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 === Run information ===\
+\
+Scheme:       weka.classifiers.functions.SMO -C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007" -calibrator "weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4"\
+Relation:     agaricus-lepiota-weka.filters.unsupervised.attribute.Reorder-R2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,1\
+Instances:    8124\
+Attributes:   23\
+              cap-shape\
+              cap-surface\
+              cap-color\
+              bruises?\
+              odor\
+              gill-attachment\
+              gill-spacing\
+              gill-size\
+              gill-color\
+              stalk-shape\
+              stalk-root\
+              stalk-surface-above-ring\
+              stalk-surface-below-ring\
+              stalk-color-above-ring\
+              stalk-color-below-ring\
+              veil-type\
+              veil-color\
+              ring-number\
+              ring-type\
+              spore-print-color\
+              population\
+              habitat\
+              class\
+Test mode:    10-fold cross-validation\
+\
+=== Classifier model (full training set) ===\
+\
+SMO\
+\
+Kernel used:\
+  Linear Kernel: K(x,y) = <x,y>\
+\
+Classifier for classes: p, e\
+\
+BinarySMO\
+\
+Machine linear: showing attribute weights, not support vectors.\
+\
+         0.0001 * (normalized) cap-shape=x\
+ +      -0.0005 * (normalized) cap-shape=b\
+ +       0.0013 * (normalized) cap-shape=s\
+ +       0.0001 * (normalized) cap-shape=f\
+ +       0      * (normalized) cap-shape=k\
+ +      -0.001  * (normalized) cap-shape=c\
+ +       0.0004 * (normalized) cap-surface=s\
+ +       0.0002 * (normalized) cap-surface=y\
+ +       0.0004 * (normalized) cap-surface=f\
+ +      -0.001  * (normalized) cap-surface=g\
+ +       0.0004 * (normalized) cap-color=n\
+ +       0.0001 * (normalized) cap-color=y\
+ +      -0.0007 * (normalized) cap-color=w\
+ +      -0.0006 * (normalized) cap-color=g\
+ +      -0.0005 * (normalized) cap-color=e\
+ +      -0.0006 * (normalized) cap-color=p\
+ +      -0.0007 * (normalized) cap-color=b\
+ +       0.0006 * (normalized) cap-color=u\
+ +       0.0014 * (normalized) cap-color=c\
+ +       0.0007 * (normalized) cap-color=r\
+ +       0.5946 * (normalized) bruises?=f\
+ +      -0.5817 * (normalized) odor=p\
+ +       1.0352 * (normalized) odor=a\
+ +       1.0354 * (normalized) odor=l\
+ +       0.8237 * (normalized) odor=n\
+ +      -0.594  * (normalized) odor=f\
+ +      -1.0957 * (normalized) odor=c\
+ +      -0.2926 * (normalized) odor=y\
+ +      -0.2924 * (normalized) odor=s\
+ +      -0.0378 * (normalized) odor=m\
+ +       0.2453 * (normalized) gill-attachment=a\
+ +       0.5629 * (normalized) gill-spacing=w\
+ +       0.777  * (normalized) gill-size=b\
+ +       0.0585 * (normalized) gill-color=k\
+ +       0.0583 * (normalized) gill-color=n\
+ +       0.0582 * (normalized) gill-color=g\
+ +       0.0583 * (normalized) gill-color=p\
+ +       0.0585 * (normalized) gill-color=w\
+ +       0.0584 * (normalized) gill-color=h\
+ +       0.0577 * (normalized) gill-color=u\
+ +       0.0589 * (normalized) gill-color=e\
+ +      -0.585  * (normalized) gill-color=b\
+ +      -0      * (normalized) gill-color=r\
+ +       0.0587 * (normalized) gill-color=y\
+ +       0.0593 * (normalized) gill-color=o\
+ +       0.4626 * (normalized) stalk-shape=t\
+ +       0.2411 * (normalized) stalk-root=e\
+ +      -0.1365 * (normalized) stalk-root=c\
+ +      -0.6393 * (normalized) stalk-root=b\
+ +       0.5348 * (normalized) stalk-root=r\
+ +       0.3002 * (normalized) stalk-surface-above-ring=s\
+ +       0.3001 * (normalized) stalk-surface-above-ring=f\
+ +      -0.6033 * (normalized) stalk-surface-above-ring=k\
+ +       0.003  * (normalized) stalk-surface-above-ring=y\
+ +       0.1583 * (normalized) stalk-surface-below-ring=s\
+ +       0.199  * (normalized) stalk-surface-below-ring=f\
+ +      -0.5153 * (normalized) stalk-surface-below-ring=y\
+ +       0.1581 * (normalized) stalk-surface-below-ring=k\
+ +      -0.043  * (normalized) stalk-color-above-ring=w\
+ +      -0      * (normalized) stalk-color-above-ring=g\
+ +      -0.0432 * (normalized) stalk-color-above-ring=p\
+ +       0.0521 * (normalized) stalk-color-above-ring=n\
+ +       0      * (normalized) stalk-color-above-ring=b\
+ +      -0      * (normalized) stalk-color-above-ring=e\
+ +       0.2831 * (normalized) stalk-color-above-ring=o\
+ +      -0.0378 * (normalized) stalk-color-above-ring=c\
+ +      -0.2112 * (normalized) stalk-color-above-ring=y\
+ +      -0.1048 * (normalized) stalk-color-below-ring=w\
+ +      -0.105  * (normalized) stalk-color-below-ring=p\
+ +      -0      * (normalized) stalk-color-below-ring=g\
+ +       0      * (normalized) stalk-color-below-ring=b\
+ +       0.1757 * (normalized) stalk-color-below-ring=n\
+ +      -0      * (normalized) stalk-color-below-ring=e\
+ +      -0.2112 * (normalized) stalk-color-below-ring=y\
+ +       0.2831 * (normalized) stalk-color-below-ring=o\
+ +      -0.0378 * (normalized) stalk-color-below-ring=c\
+ +      -0.0719 * (normalized) veil-color=w\
+ +       0.1416 * (normalized) veil-color=n\
+ +       0.1415 * (normalized) veil-color=o\
+ +      -0.2112 * (normalized) veil-color=y\
+ +      -0.3843 * (normalized) ring-number=o\
+ +       0.4221 * (normalized) ring-number=t\
+ +      -0.0378 * (normalized) ring-number=n\
+ +      -0.3585 * (normalized) ring-type=p\
+ +      -0.0727 * (normalized) ring-type=e\
+ +      -0.162  * (normalized) ring-type=l\
+ +       0.631  * (normalized) ring-type=f\
+ +      -0.0378 * (normalized) ring-type=n\
+ +       0.4237 * (normalized) spore-print-color=k\
+ +       0.4239 * (normalized) spore-print-color=n\
+ +       0.4246 * (normalized) spore-print-color=u\
+ +       0.037  * (normalized) spore-print-color=h\
+ +       0.0771 * (normalized) spore-print-color=w\
+ +      -1.6693 * (normalized) spore-print-color=r\
+ +       0.0944 * (normalized) spore-print-color=o\
+ +       0.0943 * (normalized) spore-print-color=y\
+ +       0.0944 * (normalized) spore-print-color=b\
+ +       0.1669 * (normalized) population=s\
+ +       0.1668 * (normalized) population=n\
+ +       0      * (normalized) population=a\
+ +       0.1675 * (normalized) population=v\
+ +       0.1688 * (normalized) population=y\
+ +      -0.67   * (normalized) population=c\
+ +      -0.191  * (normalized) habitat=u\
+ +      -0.205  * (normalized) habitat=g\
+ +      -0.2053 * (normalized) habitat=m\
+ +       0.047  * (normalized) habitat=d\
+ +       0.0477 * (normalized) habitat=p\
+ +       0.5999 * (normalized) habitat=w\
+ +      -0.0933 * (normalized) habitat=l\
+ -       0.6145\
+\
+Number of kernel evaluations: 2365115 (69.189% cached)\
+\
+\
+\
+Time taken to build model: 1.56 seconds\
+\
+=== Stratified cross-validation ===\
+=== Summary ===\
+\
+Correctly Classified Instances        8124              100      %\
+Incorrectly Classified Instances         0                0      %\
+Kappa statistic                          1     \
+Mean absolute error                      0     \
+Root mean squared error                  0     \
+Relative absolute error                  0      %\
+Root relative squared error              0      %\
+Total Number of Instances             8124     \
+\
+=== Detailed Accuracy By Class ===\
+\
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class\
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     p\
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     e\
+Weighted Avg.    1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     \
+\
+=== Confusion Matrix ===\
+\
+    a    b   <-- classified as\
+ 3916    0 |    a = p\
+    0 4208 |    b = e\
+\
+}
