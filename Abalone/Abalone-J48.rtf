@@ -1,0 +1,803 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 === Run information ===\
+\
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2\
+Relation:     abalone.data\
+Instances:    4177\
+Attributes:   9\
+              Sex\
+              Length\
+              Diameter\
+              Height\
+              Whole-Weight\
+              Shucked-Weight\
+              Viscera-Weight\
+              Shell-Weight\
+              Rings\
+Test mode:    10-fold cross-validation\
+\
+=== Classifier model (full training set) ===\
+\
+J48 pruned tree\
+------------------\
+\
+Viscera-Weight <= 0.162\
+|   Rings <= 8\
+|   |   Viscera-Weight <= 0.093\
+|   |   |   Height <= 0.11: I (743.0/107.0)\
+|   |   |   Height > 0.11\
+|   |   |   |   Height <= 0.12\
+|   |   |   |   |   Rings <= 7\
+|   |   |   |   |   |   Viscera-Weight <= 0.0845: I (17.0)\
+|   |   |   |   |   |   Viscera-Weight > 0.0845\
+|   |   |   |   |   |   |   Diameter <= 0.335: M (7.0/2.0)\
+|   |   |   |   |   |   |   Diameter > 0.335: I (5.0/1.0)\
+|   |   |   |   |   Rings > 7\
+|   |   |   |   |   |   Viscera-Weight <= 0.0585: F (2.0)\
+|   |   |   |   |   |   Viscera-Weight > 0.0585\
+|   |   |   |   |   |   |   Height <= 0.115\
+|   |   |   |   |   |   |   |   Diameter <= 0.33\
+|   |   |   |   |   |   |   |   |   Whole-Weight <= 0.3945: I (6.0/1.0)\
+|   |   |   |   |   |   |   |   |   Whole-Weight > 0.3945: M (2.0/1.0)\
+|   |   |   |   |   |   |   |   Diameter > 0.33: M (6.0/1.0)\
+|   |   |   |   |   |   |   Height > 0.115\
+|   |   |   |   |   |   |   |   Shucked-Weight <= 0.1885: I (7.0)\
+|   |   |   |   |   |   |   |   Shucked-Weight > 0.1885\
+|   |   |   |   |   |   |   |   |   Whole-Weight <= 0.5705: M (3.0)\
+|   |   |   |   |   |   |   |   |   Whole-Weight > 0.5705: F (2.0/1.0)\
+|   |   |   |   Height > 0.12: I (20.0/4.0)\
+|   |   Viscera-Weight > 0.093\
+|   |   |   Whole-Weight <= 0.639\
+|   |   |   |   Shucked-Weight <= 0.1555\
+|   |   |   |   |   Height <= 0.1: M (2.0)\
+|   |   |   |   |   Height > 0.1: F (8.0/1.0)\
+|   |   |   |   Shucked-Weight > 0.1555\
+|   |   |   |   |   Rings <= 7\
+|   |   |   |   |   |   Height <= 0.1: I (11.0/1.0)\
+|   |   |   |   |   |   Height > 0.1\
+|   |   |   |   |   |   |   Height <= 0.12\
+|   |   |   |   |   |   |   |   Height <= 0.105\
+|   |   |   |   |   |   |   |   |   Shell-Weight <= 0.128: I (7.0)\
+|   |   |   |   |   |   |   |   |   Shell-Weight > 0.128\
+|   |   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.102: F (3.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   Viscera-Weight > 0.102: M (4.0/1.0)\
+|   |   |   |   |   |   |   |   Height > 0.105\
+|   |   |   |   |   |   |   |   |   Shucked-Weight <= 0.2745\
+|   |   |   |   |   |   |   |   |   |   Shucked-Weight <= 0.203\
+|   |   |   |   |   |   |   |   |   |   |   Whole-Weight <= 0.4265: I (3.0)\
+|   |   |   |   |   |   |   |   |   |   |   Whole-Weight > 0.4265: F (9.0/2.0)\
+|   |   |   |   |   |   |   |   |   |   Shucked-Weight > 0.203\
+|   |   |   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.1235: I (17.0)\
+|   |   |   |   |   |   |   |   |   |   |   Viscera-Weight > 0.1235\
+|   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.129: F (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight > 0.129: I (4.0)\
+|   |   |   |   |   |   |   |   |   Shucked-Weight > 0.2745\
+|   |   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.1365\
+|   |   |   |   |   |   |   |   |   |   |   Shucked-Weight <= 0.291: F (3.0)\
+|   |   |   |   |   |   |   |   |   |   |   Shucked-Weight > 0.291\
+|   |   |   |   |   |   |   |   |   |   |   |   Rings <= 6: F (3.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   Rings > 6: I (5.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   Viscera-Weight > 0.1365: M (2.0)\
+|   |   |   |   |   |   |   Height > 0.12\
+|   |   |   |   |   |   |   |   Rings <= 6\
+|   |   |   |   |   |   |   |   |   Shucked-Weight <= 0.2135: I (3.0)\
+|   |   |   |   |   |   |   |   |   Shucked-Weight > 0.2135\
+|   |   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.116: F (3.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   Viscera-Weight > 0.116: M (2.0)\
+|   |   |   |   |   |   |   |   Rings > 6\
+|   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.129\
+|   |   |   |   |   |   |   |   |   |   Shucked-Weight <= 0.2985\
+|   |   |   |   |   |   |   |   |   |   |   Shell-Weight <= 0.1625: I (12.0)\
+|   |   |   |   |   |   |   |   |   |   |   Shell-Weight > 0.1625\
+|   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.108: M (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight > 0.108: I (2.0)\
+|   |   |   |   |   |   |   |   |   |   Shucked-Weight > 0.2985: M (2.0)\
+|   |   |   |   |   |   |   |   |   Viscera-Weight > 0.129\
+|   |   |   |   |   |   |   |   |   |   Length <= 0.5: M (4.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   Length > 0.5\
+|   |   |   |   |   |   |   |   |   |   |   Length <= 0.505: F (3.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   Length > 0.505: I (2.0)\
+|   |   |   |   |   Rings > 7\
+|   |   |   |   |   |   Length <= 0.47\
+|   |   |   |   |   |   |   Shell-Weight <= 0.1165: I (5.0)\
+|   |   |   |   |   |   |   Shell-Weight > 0.1165\
+|   |   |   |   |   |   |   |   Viscera-Weight <= 0.099\
+|   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.0955: M (4.0/1.0)\
+|   |   |   |   |   |   |   |   |   Viscera-Weight > 0.0955: I (6.0/1.0)\
+|   |   |   |   |   |   |   |   Viscera-Weight > 0.099\
+|   |   |   |   |   |   |   |   |   Whole-Weight <= 0.447: F (4.0)\
+|   |   |   |   |   |   |   |   |   Whole-Weight > 0.447: M (31.0/19.0)\
+|   |   |   |   |   |   Length > 0.47\
+|   |   |   |   |   |   |   Diameter <= 0.37\
+|   |   |   |   |   |   |   |   Height <= 0.1: M (2.0)\
+|   |   |   |   |   |   |   |   Height > 0.1\
+|   |   |   |   |   |   |   |   |   Shucked-Weight <= 0.216: I (10.0)\
+|   |   |   |   |   |   |   |   |   Shucked-Weight > 0.216\
+|   |   |   |   |   |   |   |   |   |   Shucked-Weight <= 0.2435: M (5.0)\
+|   |   |   |   |   |   |   |   |   |   Shucked-Weight > 0.2435: I (11.0/2.0)\
+|   |   |   |   |   |   |   Diameter > 0.37\
+|   |   |   |   |   |   |   |   Diameter <= 0.375: I (15.0/1.0)\
+|   |   |   |   |   |   |   |   Diameter > 0.375\
+|   |   |   |   |   |   |   |   |   Height <= 0.135\
+|   |   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.131\
+|   |   |   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.1005\
+|   |   |   |   |   |   |   |   |   |   |   |   Diameter <= 0.385: M (3.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   Diameter > 0.385: I (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   Viscera-Weight > 0.1005: I (35.0/3.0)\
+|   |   |   |   |   |   |   |   |   |   Viscera-Weight > 0.131\
+|   |   |   |   |   |   |   |   |   |   |   Shucked-Weight <= 0.2545: M (12.0/4.0)\
+|   |   |   |   |   |   |   |   |   |   |   Shucked-Weight > 0.2545\
+|   |   |   |   |   |   |   |   |   |   |   |   Length <= 0.51\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Length <= 0.5: I (3.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Length > 0.5: F (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   Length > 0.51: I (4.0/1.0)\
+|   |   |   |   |   |   |   |   |   Height > 0.135\
+|   |   |   |   |   |   |   |   |   |   Whole-Weight <= 0.6255: I (7.0)\
+|   |   |   |   |   |   |   |   |   |   Whole-Weight > 0.6255: F (3.0/1.0)\
+|   |   |   Whole-Weight > 0.639\
+|   |   |   |   Rings <= 7\
+|   |   |   |   |   Length <= 0.475: F (2.0)\
+|   |   |   |   |   Length > 0.475\
+|   |   |   |   |   |   Diameter <= 0.435\
+|   |   |   |   |   |   |   Viscera-Weight <= 0.1575: M (20.0/1.0)\
+|   |   |   |   |   |   |   Viscera-Weight > 0.1575\
+|   |   |   |   |   |   |   |   Height <= 0.13: M (3.0/1.0)\
+|   |   |   |   |   |   |   |   Height > 0.13: I (2.0)\
+|   |   |   |   |   |   Diameter > 0.435: F (2.0/1.0)\
+|   |   |   |   Rings > 7\
+|   |   |   |   |   Shucked-Weight <= 0.399\
+|   |   |   |   |   |   Length <= 0.535\
+|   |   |   |   |   |   |   Shucked-Weight <= 0.3145\
+|   |   |   |   |   |   |   |   Shucked-Weight <= 0.295: M (3.0/1.0)\
+|   |   |   |   |   |   |   |   Shucked-Weight > 0.295\
+|   |   |   |   |   |   |   |   |   Length <= 0.515: F (2.0)\
+|   |   |   |   |   |   |   |   |   Length > 0.515: I (4.0/1.0)\
+|   |   |   |   |   |   |   Shucked-Weight > 0.3145\
+|   |   |   |   |   |   |   |   Shell-Weight <= 0.1535: M (4.0/1.0)\
+|   |   |   |   |   |   |   |   Shell-Weight > 0.1535\
+|   |   |   |   |   |   |   |   |   Whole-Weight <= 0.7185: I (11.0/2.0)\
+|   |   |   |   |   |   |   |   |   Whole-Weight > 0.7185: M (6.0/1.0)\
+|   |   |   |   |   |   Length > 0.535\
+|   |   |   |   |   |   |   Shucked-Weight <= 0.3175: F (3.0/1.0)\
+|   |   |   |   |   |   |   Shucked-Weight > 0.3175: I (14.0)\
+|   |   |   |   |   Shucked-Weight > 0.399\
+|   |   |   |   |   |   Diameter <= 0.435: F (3.0)\
+|   |   |   |   |   |   Diameter > 0.435\
+|   |   |   |   |   |   |   Shell-Weight <= 0.252: M (3.0)\
+|   |   |   |   |   |   |   Shell-Weight > 0.252: F (3.0/1.0)\
+|   Rings > 8\
+|   |   Rings <= 9\
+|   |   |   Length <= 0.425\
+|   |   |   |   Length <= 0.42\
+|   |   |   |   |   Length <= 0.415\
+|   |   |   |   |   |   Viscera-Weight <= 0.045\
+|   |   |   |   |   |   |   Viscera-Weight <= 0.0385\
+|   |   |   |   |   |   |   |   Length <= 0.32: I (3.0/1.0)\
+|   |   |   |   |   |   |   |   Length > 0.32: M (5.0)\
+|   |   |   |   |   |   |   Viscera-Weight > 0.0385: I (7.0/1.0)\
+|   |   |   |   |   |   Viscera-Weight > 0.045: M (38.0/17.0)\
+|   |   |   |   |   Length > 0.415: I (4.0)\
+|   |   |   |   Length > 0.42: M (5.0)\
+|   |   |   Length > 0.425\
+|   |   |   |   Height <= 0.145\
+|   |   |   |   |   Shucked-Weight <= 0.391\
+|   |   |   |   |   |   Length <= 0.515\
+|   |   |   |   |   |   |   Whole-Weight <= 0.594\
+|   |   |   |   |   |   |   |   Length <= 0.45\
+|   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.097\
+|   |   |   |   |   |   |   |   |   |   Length <= 0.435\
+|   |   |   |   |   |   |   |   |   |   |   Shucked-Weight <= 0.1555: I (3.0)\
+|   |   |   |   |   |   |   |   |   |   |   Shucked-Weight > 0.1555: F (2.0)\
+|   |   |   |   |   |   |   |   |   |   Length > 0.435\
+|   |   |   |   |   |   |   |   |   |   |   Height <= 0.12\
+|   |   |   |   |   |   |   |   |   |   |   |   Length <= 0.445: I (9.0/2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   Length > 0.445\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.09: M (3.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight > 0.09: F (3.0)\
+|   |   |   |   |   |   |   |   |   |   |   Height > 0.12: M (5.0/1.0)\
+|   |   |   |   |   |   |   |   |   Viscera-Weight > 0.097: F (7.0/1.0)\
+|   |   |   |   |   |   |   |   Length > 0.45\
+|   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.103: I (24.0/3.0)\
+|   |   |   |   |   |   |   |   |   Viscera-Weight > 0.103\
+|   |   |   |   |   |   |   |   |   |   Length <= 0.505\
+|   |   |   |   |   |   |   |   |   |   |   Height <= 0.12\
+|   |   |   |   |   |   |   |   |   |   |   |   Height <= 0.105\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Diameter <= 0.36: M (3.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Diameter > 0.36: F (4.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   Height > 0.105\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.127: I (9.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight > 0.127: F (4.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   Height > 0.12\
+|   |   |   |   |   |   |   |   |   |   |   |   Height <= 0.125\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Length <= 0.49\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Length <= 0.475: M (7.0/3.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Length > 0.475: I (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Length > 0.49: M (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   Height > 0.125\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Length <= 0.46: M (5.0/2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Length > 0.46: I (8.0/2.0)\
+|   |   |   |   |   |   |   |   |   |   Length > 0.505\
+|   |   |   |   |   |   |   |   |   |   |   Shucked-Weight <= 0.207: F (4.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   Shucked-Weight > 0.207: I (6.0)\
+|   |   |   |   |   |   |   Whole-Weight > 0.594\
+|   |   |   |   |   |   |   |   Shell-Weight <= 0.1725: M (11.0/1.0)\
+|   |   |   |   |   |   |   |   Shell-Weight > 0.1725\
+|   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.126: I (5.0/1.0)\
+|   |   |   |   |   |   |   |   |   Viscera-Weight > 0.126\
+|   |   |   |   |   |   |   |   |   |   Diameter <= 0.42\
+|   |   |   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.141: F (4.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   Viscera-Weight > 0.141: M (5.0)\
+|   |   |   |   |   |   |   |   |   |   Diameter > 0.42: I (2.0)\
+|   |   |   |   |   |   Length > 0.515\
+|   |   |   |   |   |   |   Whole-Weight <= 0.775: I (55.0/13.0)\
+|   |   |   |   |   |   |   Whole-Weight > 0.775: F (7.0/2.0)\
+|   |   |   |   |   Shucked-Weight > 0.391\
+|   |   |   |   |   |   Diameter <= 0.42: M (4.0)\
+|   |   |   |   |   |   Diameter > 0.42\
+|   |   |   |   |   |   |   Diameter <= 0.435: I (2.0)\
+|   |   |   |   |   |   |   Diameter > 0.435\
+|   |   |   |   |   |   |   |   Shucked-Weight <= 0.4345: M (4.0)\
+|   |   |   |   |   |   |   |   Shucked-Weight > 0.4345: I (2.0)\
+|   |   |   |   Height > 0.145\
+|   |   |   |   |   Length <= 0.54\
+|   |   |   |   |   |   Length <= 0.515\
+|   |   |   |   |   |   |   Length <= 0.48: M (2.0)\
+|   |   |   |   |   |   |   Length > 0.48: F (3.0)\
+|   |   |   |   |   |   Length > 0.515: M (5.0/1.0)\
+|   |   |   |   |   Length > 0.54\
+|   |   |   |   |   |   Whole-Weight <= 0.806: I (3.0/1.0)\
+|   |   |   |   |   |   Whole-Weight > 0.806: F (2.0)\
+|   |   Rings > 9\
+|   |   |   Shell-Weight <= 0.0695\
+|   |   |   |   Viscera-Weight <= 0.0355\
+|   |   |   |   |   Diameter <= 0.24: M (3.0)\
+|   |   |   |   |   Diameter > 0.24: I (3.0)\
+|   |   |   |   Viscera-Weight > 0.0355: M (11.0)\
+|   |   |   Shell-Weight > 0.0695\
+|   |   |   |   Shell-Weight <= 0.283\
+|   |   |   |   |   Shucked-Weight <= 0.302\
+|   |   |   |   |   |   Length <= 0.51\
+|   |   |   |   |   |   |   Whole-Weight <= 0.53\
+|   |   |   |   |   |   |   |   Height <= 0.095\
+|   |   |   |   |   |   |   |   |   Rings <= 10\
+|   |   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.0655\
+|   |   |   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.043: M (3.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   Viscera-Weight > 0.043: F (4.0)\
+|   |   |   |   |   |   |   |   |   |   Viscera-Weight > 0.0655: M (2.0)\
+|   |   |   |   |   |   |   |   |   Rings > 10\
+|   |   |   |   |   |   |   |   |   |   Shucked-Weight <= 0.0935: I (3.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   Shucked-Weight > 0.0935: M (5.0)\
+|   |   |   |   |   |   |   |   Height > 0.095\
+|   |   |   |   |   |   |   |   |   Diameter <= 0.28: I (6.0/1.0)\
+|   |   |   |   |   |   |   |   |   Diameter > 0.28\
+|   |   |   |   |   |   |   |   |   |   Rings <= 12\
+|   |   |   |   |   |   |   |   |   |   |   Shell-Weight <= 0.156\
+|   |   |   |   |   |   |   |   |   |   |   |   Height <= 0.1\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Shucked-Weight <= 0.17\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Rings <= 10\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.0655: I (4.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight > 0.0655: M (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Rings > 10\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Whole-Weight <= 0.301: M (4.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Whole-Weight > 0.301: I (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Shucked-Weight > 0.17: F (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   Height > 0.1\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Length <= 0.4\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Rings <= 10\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Shucked-Weight <= 0.1165\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Diameter <= 0.29: F (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Diameter > 0.29: M (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Shucked-Weight > 0.1165: F (5.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Rings > 10\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Height <= 0.105: F (3.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Height > 0.105: M (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Length > 0.4\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Shell-Weight <= 0.114\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Diameter <= 0.325\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.061: I (3.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight > 0.061: F (5.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Diameter > 0.325: I (5.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Shell-Weight > 0.114\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Rings <= 10\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Shell-Weight <= 0.15\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.0865: I (6.0/2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight > 0.0865\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Diameter <= 0.36\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Whole-Weight <= 0.418\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Height <= 0.125: M (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Height > 0.125: F (3.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Whole-Weight > 0.418: F (6.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Diameter > 0.36\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Length <= 0.46: M (2.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Length > 0.46: I (3.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Shell-Weight > 0.15: M (7.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Rings > 10\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Length <= 0.43\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Height <= 0.11: F (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Height > 0.11: M (6.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Length > 0.43\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Length <= 0.45\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.088\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Diameter <= 0.335: I (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Diameter > 0.335\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.0825: F (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight > 0.0825: I (3.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight > 0.088: F (7.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Length > 0.45\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Length <= 0.465\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Shell-Weight <= 0.15: M (4.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Shell-Weight > 0.15: I (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Length > 0.465\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Rings <= 11\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Height <= 0.115: F (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Height > 0.115: I (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Rings > 11: F (5.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   Shell-Weight > 0.156\
+|   |   |   |   |   |   |   |   |   |   |   |   Length <= 0.465: M (14.0/3.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   Length > 0.465\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Shell-Weight <= 0.176\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Height <= 0.12: I (3.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Height > 0.12: M (4.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Shell-Weight > 0.176: F (2.0)\
+|   |   |   |   |   |   |   |   |   |   Rings > 12\
+|   |   |   |   |   |   |   |   |   |   |   Height <= 0.13\
+|   |   |   |   |   |   |   |   |   |   |   |   Whole-Weight <= 0.359\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Length <= 0.41: F (3.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Length > 0.41: M (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   Whole-Weight > 0.359\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Diameter <= 0.345: I (8.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Diameter > 0.345\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Whole-Weight <= 0.507\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Rings <= 14: F (6.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Rings > 14\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.086: I (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight > 0.086: F (5.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Whole-Weight > 0.507: I (3.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   Height > 0.13\
+|   |   |   |   |   |   |   |   |   |   |   |   Height <= 0.14\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Diameter <= 0.365\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.0815: M (3.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight > 0.0815: I (6.0/2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Diameter > 0.365: M (2.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   Height > 0.14: I (4.0)\
+|   |   |   |   |   |   |   Whole-Weight > 0.53\
+|   |   |   |   |   |   |   |   Viscera-Weight <= 0.1555: F (115.0/51.0)\
+|   |   |   |   |   |   |   |   Viscera-Weight > 0.1555\
+|   |   |   |   |   |   |   |   |   Shucked-Weight <= 0.274: M (6.0/1.0)\
+|   |   |   |   |   |   |   |   |   Shucked-Weight > 0.274: I (2.0)\
+|   |   |   |   |   |   Length > 0.51\
+|   |   |   |   |   |   |   Whole-Weight <= 0.7325\
+|   |   |   |   |   |   |   |   Diameter <= 0.435\
+|   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.1525\
+|   |   |   |   |   |   |   |   |   |   Shell-Weight <= 0.1765\
+|   |   |   |   |   |   |   |   |   |   |   Height <= 0.115: I (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   Height > 0.115: M (3.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   Shell-Weight > 0.1765\
+|   |   |   |   |   |   |   |   |   |   |   Whole-Weight <= 0.6: I (6.0)\
+|   |   |   |   |   |   |   |   |   |   |   Whole-Weight > 0.6: F (30.0/13.0)\
+|   |   |   |   |   |   |   |   |   Viscera-Weight > 0.1525\
+|   |   |   |   |   |   |   |   |   |   Rings <= 11\
+|   |   |   |   |   |   |   |   |   |   |   Whole-Weight <= 0.7055\
+|   |   |   |   |   |   |   |   |   |   |   |   Shucked-Weight <= 0.2825: I (5.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   Shucked-Weight > 0.2825: M (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   Whole-Weight > 0.7055: F (3.0)\
+|   |   |   |   |   |   |   |   |   |   Rings > 11: M (3.0)\
+|   |   |   |   |   |   |   |   Diameter > 0.435: M (3.0/1.0)\
+|   |   |   |   |   |   |   Whole-Weight > 0.7325\
+|   |   |   |   |   |   |   |   Rings <= 16\
+|   |   |   |   |   |   |   |   |   Height <= 0.135: M (4.0/1.0)\
+|   |   |   |   |   |   |   |   |   Height > 0.135: F (6.0)\
+|   |   |   |   |   |   |   |   Rings > 16: M (4.0/1.0)\
+|   |   |   |   |   Shucked-Weight > 0.302\
+|   |   |   |   |   |   Rings <= 15\
+|   |   |   |   |   |   |   Rings <= 10\
+|   |   |   |   |   |   |   |   Height <= 0.155\
+|   |   |   |   |   |   |   |   |   Height <= 0.135\
+|   |   |   |   |   |   |   |   |   |   Diameter <= 0.43\
+|   |   |   |   |   |   |   |   |   |   |   Length <= 0.52: M (3.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   Length > 0.52: F (2.0)\
+|   |   |   |   |   |   |   |   |   |   Diameter > 0.43: I (2.0)\
+|   |   |   |   |   |   |   |   |   Height > 0.135\
+|   |   |   |   |   |   |   |   |   |   Length <= 0.57: I (18.0/4.0)\
+|   |   |   |   |   |   |   |   |   |   Length > 0.57: M (3.0/1.0)\
+|   |   |   |   |   |   |   |   Height > 0.155: M (2.0)\
+|   |   |   |   |   |   |   Rings > 10\
+|   |   |   |   |   |   |   |   Viscera-Weight <= 0.1595\
+|   |   |   |   |   |   |   |   |   Height <= 0.145\
+|   |   |   |   |   |   |   |   |   |   Whole-Weight <= 0.7735\
+|   |   |   |   |   |   |   |   |   |   |   Length <= 0.52: I (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   Length > 0.52: M (9.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   Whole-Weight > 0.7735: I (4.0)\
+|   |   |   |   |   |   |   |   |   Height > 0.145: M (8.0/1.0)\
+|   |   |   |   |   |   |   |   Viscera-Weight > 0.1595: I (4.0)\
+|   |   |   |   |   |   Rings > 15: F (2.0)\
+|   |   |   |   Shell-Weight > 0.283\
+|   |   |   |   |   Height <= 0.155\
+|   |   |   |   |   |   Rings <= 17\
+|   |   |   |   |   |   |   Rings <= 13\
+|   |   |   |   |   |   |   |   Length <= 0.55: M (4.0/1.0)\
+|   |   |   |   |   |   |   |   Length > 0.55: F (5.0)\
+|   |   |   |   |   |   |   Rings > 13: M (6.0/1.0)\
+|   |   |   |   |   |   Rings > 17: F (4.0)\
+|   |   |   |   |   Height > 0.155\
+|   |   |   |   |   |   Length <= 0.575: M (13.0/2.0)\
+|   |   |   |   |   |   Length > 0.575: F (2.0)\
+Viscera-Weight > 0.162\
+|   Whole-Weight <= 0.9895\
+|   |   Shucked-Weight <= 0.25\
+|   |   |   Height <= 0.145: M (25.0/10.0)\
+|   |   |   Height > 0.145\
+|   |   |   |   Viscera-Weight <= 0.1705\
+|   |   |   |   |   Whole-Weight <= 0.744: M (2.0)\
+|   |   |   |   |   Whole-Weight > 0.744: F (2.0)\
+|   |   |   |   Viscera-Weight > 0.1705: F (7.0)\
+|   |   Shucked-Weight > 0.25\
+|   |   |   Viscera-Weight <= 0.22\
+|   |   |   |   Length <= 0.535\
+|   |   |   |   |   Length <= 0.485\
+|   |   |   |   |   |   Rings <= 8: I (4.0/1.0)\
+|   |   |   |   |   |   Rings > 8: M (4.0/1.0)\
+|   |   |   |   |   Length > 0.485\
+|   |   |   |   |   |   Whole-Weight <= 0.8805\
+|   |   |   |   |   |   |   Whole-Weight <= 0.6815\
+|   |   |   |   |   |   |   |   Diameter <= 0.405\
+|   |   |   |   |   |   |   |   |   Rings <= 14\
+|   |   |   |   |   |   |   |   |   |   Length <= 0.505\
+|   |   |   |   |   |   |   |   |   |   |   Whole-Weight <= 0.6385: M (2.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   Whole-Weight > 0.6385: F (4.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   Length > 0.505\
+|   |   |   |   |   |   |   |   |   |   |   Height <= 0.12: I (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   Height > 0.12: M (3.0)\
+|   |   |   |   |   |   |   |   |   Rings > 14: F (2.0)\
+|   |   |   |   |   |   |   |   Diameter > 0.405: I (3.0)\
+|   |   |   |   |   |   |   Whole-Weight > 0.6815\
+|   |   |   |   |   |   |   |   Height <= 0.115: F (4.0)\
+|   |   |   |   |   |   |   |   Height > 0.115\
+|   |   |   |   |   |   |   |   |   Height <= 0.12: M (4.0)\
+|   |   |   |   |   |   |   |   |   Height > 0.12\
+|   |   |   |   |   |   |   |   |   |   Whole-Weight <= 0.7035: F (6.0)\
+|   |   |   |   |   |   |   |   |   |   Whole-Weight > 0.7035\
+|   |   |   |   |   |   |   |   |   |   |   Height <= 0.17\
+|   |   |   |   |   |   |   |   |   |   |   |   Shucked-Weight <= 0.405\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Height <= 0.135\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Length <= 0.525\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Rings <= 11: M (9.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Rings > 11: F (3.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Length > 0.525\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Height <= 0.125: M (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Height > 0.125\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Shucked-Weight <= 0.319\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Diameter <= 0.435: M (5.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Diameter > 0.435: F (2.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Shucked-Weight > 0.319\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Shell-Weight <= 0.205: F (3.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Shell-Weight > 0.205: I (4.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Height > 0.135\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Diameter <= 0.405\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Shell-Weight <= 0.192: M (5.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Shell-Weight > 0.192\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Whole-Weight <= 0.8205: F (11.0/4.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Whole-Weight > 0.8205\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Shucked-Weight <= 0.3385: M (5.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Shucked-Weight > 0.3385: F (3.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Diameter > 0.405\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Height <= 0.165\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.172: M (8.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight > 0.172\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Length <= 0.51: M (4.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Length > 0.51\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Height <= 0.16: F (17.0/2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Height > 0.16: M (4.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Height > 0.165: F (3.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   Shucked-Weight > 0.405: F (6.0)\
+|   |   |   |   |   |   |   |   |   |   |   Height > 0.17: M (5.0/1.0)\
+|   |   |   |   |   |   Whole-Weight > 0.8805\
+|   |   |   |   |   |   |   Rings <= 16: M (9.0)\
+|   |   |   |   |   |   |   Rings > 16: I (3.0/1.0)\
+|   |   |   |   Length > 0.535\
+|   |   |   |   |   Whole-Weight <= 0.825\
+|   |   |   |   |   |   Rings <= 14\
+|   |   |   |   |   |   |   Height <= 0.125\
+|   |   |   |   |   |   |   |   Shell-Weight <= 0.2315: M (7.0/1.0)\
+|   |   |   |   |   |   |   |   Shell-Weight > 0.2315: F (3.0/1.0)\
+|   |   |   |   |   |   |   Height > 0.125\
+|   |   |   |   |   |   |   |   Height <= 0.175\
+|   |   |   |   |   |   |   |   |   Rings <= 9\
+|   |   |   |   |   |   |   |   |   |   Shell-Weight <= 0.228\
+|   |   |   |   |   |   |   |   |   |   |   Rings <= 8\
+|   |   |   |   |   |   |   |   |   |   |   |   Shucked-Weight <= 0.34\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Length <= 0.555: I (3.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Length > 0.555: F (3.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   Shucked-Weight > 0.34: M (8.0/2.0)\
+|   |   |   |   |   |   |   |   |   |   |   Rings > 8\
+|   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.188\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Length <= 0.55: F (8.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Length > 0.55\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Diameter <= 0.43: F (3.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Diameter > 0.43: I (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight > 0.188\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Diameter <= 0.42: F (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Diameter > 0.42: M (5.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   Shell-Weight > 0.228\
+|   |   |   |   |   |   |   |   |   |   |   Height <= 0.15: I (6.0)\
+|   |   |   |   |   |   |   |   |   |   |   Height > 0.15\
+|   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.185: F (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight > 0.185: I (2.0)\
+|   |   |   |   |   |   |   |   |   Rings > 9\
+|   |   |   |   |   |   |   |   |   |   Height <= 0.165\
+|   |   |   |   |   |   |   |   |   |   |   Diameter <= 0.45\
+|   |   |   |   |   |   |   |   |   |   |   |   Length <= 0.545\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Rings <= 10: I (3.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Rings > 10\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Length <= 0.54\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Shell-Weight <= 0.2245: F (2.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Shell-Weight > 0.2245: M (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Length > 0.54: F (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   Length > 0.545\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Shell-Weight <= 0.2565: I (20.0/2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Shell-Weight > 0.2565\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Shell-Weight <= 0.2775: M (5.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Shell-Weight > 0.2775: I (3.0)\
+|   |   |   |   |   |   |   |   |   |   |   Diameter > 0.45: M (3.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   Height > 0.165: F (2.0)\
+|   |   |   |   |   |   |   |   Height > 0.175: M (3.0)\
+|   |   |   |   |   |   Rings > 14\
+|   |   |   |   |   |   |   Height <= 0.145: F (3.0/1.0)\
+|   |   |   |   |   |   |   Height > 0.145: M (2.0)\
+|   |   |   |   |   Whole-Weight > 0.825\
+|   |   |   |   |   |   Length <= 0.605\
+|   |   |   |   |   |   |   Diameter <= 0.475: M (278.0/141.0)\
+|   |   |   |   |   |   |   Diameter > 0.475\
+|   |   |   |   |   |   |   |   Height <= 0.145: M (3.0)\
+|   |   |   |   |   |   |   |   Height > 0.145: F (9.0/2.0)\
+|   |   |   |   |   |   Length > 0.605\
+|   |   |   |   |   |   |   Shell-Weight <= 0.2815\
+|   |   |   |   |   |   |   |   Rings <= 9\
+|   |   |   |   |   |   |   |   |   Height <= 0.135: I (2.0)\
+|   |   |   |   |   |   |   |   |   Height > 0.135: F (5.0/1.0)\
+|   |   |   |   |   |   |   |   Rings > 9\
+|   |   |   |   |   |   |   |   |   Rings <= 10: M (5.0/1.0)\
+|   |   |   |   |   |   |   |   |   Rings > 10: F (3.0)\
+|   |   |   |   |   |   |   Shell-Weight > 0.2815: I (8.0/2.0)\
+|   |   |   Viscera-Weight > 0.22\
+|   |   |   |   Diameter <= 0.465\
+|   |   |   |   |   Diameter <= 0.4: M (6.0)\
+|   |   |   |   |   Diameter > 0.4\
+|   |   |   |   |   |   Whole-Weight <= 0.9605\
+|   |   |   |   |   |   |   Height <= 0.14\
+|   |   |   |   |   |   |   |   Shucked-Weight <= 0.3835: M (9.0/3.0)\
+|   |   |   |   |   |   |   |   Shucked-Weight > 0.3835\
+|   |   |   |   |   |   |   |   |   Whole-Weight <= 0.888: M (2.0)\
+|   |   |   |   |   |   |   |   |   Whole-Weight > 0.888: F (5.0)\
+|   |   |   |   |   |   |   Height > 0.14\
+|   |   |   |   |   |   |   |   Whole-Weight <= 0.9045\
+|   |   |   |   |   |   |   |   |   Whole-Weight <= 0.8705\
+|   |   |   |   |   |   |   |   |   |   Length <= 0.55: F (3.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   Length > 0.55: M (3.0)\
+|   |   |   |   |   |   |   |   |   Whole-Weight > 0.8705: F (12.0/1.0)\
+|   |   |   |   |   |   |   |   Whole-Weight > 0.9045\
+|   |   |   |   |   |   |   |   |   Length <= 0.545: F (2.0)\
+|   |   |   |   |   |   |   |   |   Length > 0.545\
+|   |   |   |   |   |   |   |   |   |   Rings <= 9\
+|   |   |   |   |   |   |   |   |   |   |   Shucked-Weight <= 0.4035\
+|   |   |   |   |   |   |   |   |   |   |   |   Length <= 0.575: M (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   Length > 0.575: F (4.0)\
+|   |   |   |   |   |   |   |   |   |   |   Shucked-Weight > 0.4035: M (5.0)\
+|   |   |   |   |   |   |   |   |   |   Rings > 9: M (13.0)\
+|   |   |   |   |   |   Whole-Weight > 0.9605: F (20.0/3.0)\
+|   |   |   |   Diameter > 0.465\
+|   |   |   |   |   Height <= 0.165\
+|   |   |   |   |   |   Height <= 0.145: I (3.0/1.0)\
+|   |   |   |   |   |   Height > 0.145\
+|   |   |   |   |   |   |   Shucked-Weight <= 0.399: F (5.0)\
+|   |   |   |   |   |   |   Shucked-Weight > 0.399: M (4.0/1.0)\
+|   |   |   |   |   Height > 0.165: I (3.0)\
+|   Whole-Weight > 0.9895\
+|   |   Shucked-Weight <= 0.873\
+|   |   |   Diameter <= 0.53\
+|   |   |   |   Diameter <= 0.49\
+|   |   |   |   |   Rings <= 10\
+|   |   |   |   |   |   Height <= 0.15\
+|   |   |   |   |   |   |   Shell-Weight <= 0.239: M (9.0)\
+|   |   |   |   |   |   |   Shell-Weight > 0.239\
+|   |   |   |   |   |   |   |   Rings <= 8\
+|   |   |   |   |   |   |   |   |   Height <= 0.135: M (4.0)\
+|   |   |   |   |   |   |   |   |   Height > 0.135\
+|   |   |   |   |   |   |   |   |   |   Diameter <= 0.475\
+|   |   |   |   |   |   |   |   |   |   |   Shell-Weight <= 0.2675\
+|   |   |   |   |   |   |   |   |   |   |   |   Diameter <= 0.45: M (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   Diameter > 0.45\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Shucked-Weight <= 0.498\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Height <= 0.145: F (3.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Height > 0.145: M (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Shucked-Weight > 0.498: F (4.0)\
+|   |   |   |   |   |   |   |   |   |   |   Shell-Weight > 0.2675: F (8.0)\
+|   |   |   |   |   |   |   |   |   |   Diameter > 0.475: M (5.0/1.0)\
+|   |   |   |   |   |   |   |   Rings > 8\
+|   |   |   |   |   |   |   |   |   Rings <= 9\
+|   |   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.1995: F (5.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   Viscera-Weight > 0.1995\
+|   |   |   |   |   |   |   |   |   |   |   Height <= 0.14\
+|   |   |   |   |   |   |   |   |   |   |   |   Length <= 0.61\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Height <= 0.135: M (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Height > 0.135\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Shucked-Weight <= 0.4865: F (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Shucked-Weight > 0.4865: M (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   Length > 0.61: F (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   Height > 0.14\
+|   |   |   |   |   |   |   |   |   |   |   |   Length <= 0.605\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Diameter <= 0.46: M (6.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Diameter > 0.46: F (4.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   Length > 0.605: M (13.0/1.0)\
+|   |   |   |   |   |   |   |   |   Rings > 9\
+|   |   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.2455\
+|   |   |   |   |   |   |   |   |   |   |   Shell-Weight <= 0.3285\
+|   |   |   |   |   |   |   |   |   |   |   |   Length <= 0.61: M (10.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   Length > 0.61\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Diameter <= 0.475: F (3.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Diameter > 0.475: M (3.0)\
+|   |   |   |   |   |   |   |   |   |   |   Shell-Weight > 0.3285: F (2.0)\
+|   |   |   |   |   |   |   |   |   |   Viscera-Weight > 0.2455\
+|   |   |   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.2515: I (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   Viscera-Weight > 0.2515: F (10.0/2.0)\
+|   |   |   |   |   |   Height > 0.15\
+|   |   |   |   |   |   |   Rings <= 9\
+|   |   |   |   |   |   |   |   Shell-Weight <= 0.3795\
+|   |   |   |   |   |   |   |   |   Diameter <= 0.41\
+|   |   |   |   |   |   |   |   |   |   Height <= 0.165: M (3.0)\
+|   |   |   |   |   |   |   |   |   |   Height > 0.165: F (2.0/1.0)\
+|   |   |   |   |   |   |   |   |   Diameter > 0.41\
+|   |   |   |   |   |   |   |   |   |   Rings <= 8\
+|   |   |   |   |   |   |   |   |   |   |   Shucked-Weight <= 0.586: F (23.0/7.0)\
+|   |   |   |   |   |   |   |   |   |   |   Shucked-Weight > 0.586: M (8.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   Rings > 8\
+|   |   |   |   |   |   |   |   |   |   |   Length <= 0.565: F (4.0)\
+|   |   |   |   |   |   |   |   |   |   |   Length > 0.565\
+|   |   |   |   |   |   |   |   |   |   |   |   Length <= 0.645: M (82.0/36.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   Length > 0.645: F (4.0)\
+|   |   |   |   |   |   |   |   Shell-Weight > 0.3795: F (6.0/1.0)\
+|   |   |   |   |   |   |   Rings > 9\
+|   |   |   |   |   |   |   |   Whole-Weight <= 1.077\
+|   |   |   |   |   |   |   |   |   Shell-Weight <= 0.3065: M (24.0/11.0)\
+|   |   |   |   |   |   |   |   |   Shell-Weight > 0.3065: F (11.0/3.0)\
+|   |   |   |   |   |   |   |   Whole-Weight > 1.077\
+|   |   |   |   |   |   |   |   |   Height <= 0.175\
+|   |   |   |   |   |   |   |   |   |   Diameter <= 0.485\
+|   |   |   |   |   |   |   |   |   |   |   Shell-Weight <= 0.348: M (48.0/16.0)\
+|   |   |   |   |   |   |   |   |   |   |   Shell-Weight > 0.348: F (12.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   Diameter > 0.485\
+|   |   |   |   |   |   |   |   |   |   |   Whole-Weight <= 1.211: M (5.0)\
+|   |   |   |   |   |   |   |   |   |   |   Whole-Weight > 1.211\
+|   |   |   |   |   |   |   |   |   |   |   |   Whole-Weight <= 1.331: F (3.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   Whole-Weight > 1.331: M (2.0)\
+|   |   |   |   |   |   |   |   |   Height > 0.175\
+|   |   |   |   |   |   |   |   |   |   Length <= 0.625: M (15.0/2.0)\
+|   |   |   |   |   |   |   |   |   |   Length > 0.625: F (3.0/1.0)\
+|   |   |   |   |   Rings > 10\
+|   |   |   |   |   |   Height <= 0.145: M (32.0/12.0)\
+|   |   |   |   |   |   Height > 0.145\
+|   |   |   |   |   |   |   Shell-Weight <= 0.3045\
+|   |   |   |   |   |   |   |   Diameter <= 0.445\
+|   |   |   |   |   |   |   |   |   Rings <= 12: I (3.0/1.0)\
+|   |   |   |   |   |   |   |   |   Rings > 12: M (2.0)\
+|   |   |   |   |   |   |   |   Diameter > 0.445\
+|   |   |   |   |   |   |   |   |   Diameter <= 0.485: F (44.0/11.0)\
+|   |   |   |   |   |   |   |   |   Diameter > 0.485\
+|   |   |   |   |   |   |   |   |   |   Shucked-Weight <= 0.534: M (3.0)\
+|   |   |   |   |   |   |   |   |   |   Shucked-Weight > 0.534: F (3.0/1.0)\
+|   |   |   |   |   |   |   Shell-Weight > 0.3045\
+|   |   |   |   |   |   |   |   Length <= 0.605: M (94.0/39.0)\
+|   |   |   |   |   |   |   |   Length > 0.605\
+|   |   |   |   |   |   |   |   |   Diameter <= 0.46\
+|   |   |   |   |   |   |   |   |   |   Diameter <= 0.455: F (3.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   Diameter > 0.455: I (3.0)\
+|   |   |   |   |   |   |   |   |   Diameter > 0.46\
+|   |   |   |   |   |   |   |   |   |   Shell-Weight <= 0.339\
+|   |   |   |   |   |   |   |   |   |   |   Diameter <= 0.485\
+|   |   |   |   |   |   |   |   |   |   |   |   Whole-Weight <= 1.2085\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Whole-Weight <= 1.167\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.236: M (6.0/2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight > 0.236\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Rings <= 11\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight <= 0.2575: I (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Viscera-Weight > 0.2575: M (3.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Rings > 11: I (5.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Whole-Weight > 1.167\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Rings <= 11: F (3.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Rings > 11: I (3.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   Whole-Weight > 1.2085\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Diameter <= 0.48\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Rings <= 11: M (4.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Rings > 11\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Shucked-Weight <= 0.601: F (4.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Shucked-Weight > 0.601: M (3.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Diameter > 0.48: F (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   Diameter > 0.485\
+|   |   |   |   |   |   |   |   |   |   |   |   Shell-Weight <= 0.312: I (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   Shell-Weight > 0.312: M (6.0)\
+|   |   |   |   |   |   |   |   |   |   Shell-Weight > 0.339: F (52.0/24.0)\
+|   |   |   |   Diameter > 0.49\
+|   |   |   |   |   Rings <= 14\
+|   |   |   |   |   |   Diameter <= 0.505: F (214.0/98.0)\
+|   |   |   |   |   |   Diameter > 0.505\
+|   |   |   |   |   |   |   Diameter <= 0.515: M (119.0/54.0)\
+|   |   |   |   |   |   |   Diameter > 0.515\
+|   |   |   |   |   |   |   |   Whole-Weight <= 1.764\
+|   |   |   |   |   |   |   |   |   Whole-Weight <= 1.2425\
+|   |   |   |   |   |   |   |   |   |   Whole-Weight <= 1.1955\
+|   |   |   |   |   |   |   |   |   |   |   Shucked-Weight <= 0.4465: F (2.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   Shucked-Weight > 0.4465: M (5.0)\
+|   |   |   |   |   |   |   |   |   |   Whole-Weight > 1.1955: F (3.0/1.0)\
+|   |   |   |   |   |   |   |   |   Whole-Weight > 1.2425\
+|   |   |   |   |   |   |   |   |   |   Shucked-Weight <= 0.646\
+|   |   |   |   |   |   |   |   |   |   |   Rings <= 13\
+|   |   |   |   |   |   |   |   |   |   |   |   Diameter <= 0.52\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Height <= 0.175\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Shell-Weight <= 0.4085\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Height <= 0.15\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Length <= 0.67: F (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Length > 0.67: M (2.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Height > 0.15: M (7.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   Shell-Weight > 0.4085: F (3.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   |   Height > 0.175: F (9.0/1.0)\
+|   |   |   |   |   |   |   |   |   |   |   |   Diameter > 0.52: F (36.0/13.0)\
+|   |   |   |   |   |   |   |   |   |   |   Rings > 13: M (3.0)\
+|   |   |   |   |   |   |   |   |   |   Shucked-Weight > 0.646\
+|   |   |   |   |   |   |   |   |   |   |   Length <= 0.695: M (57.0/15.0)\
+|   |   |   |   |   |   |   |   |   |   |   Length > 0.695: F (5.0/1.0)\
+|   |   |   |   |   |   |   |   Whole-Weight > 1.764: F (6.0/1.0)\
+|   |   |   |   |   Rings > 14: M (75.0/35.0)\
+|   |   |   Diameter > 0.53\
+|   |   |   |   Height <= 0.215: F (197.0/72.0)\
+|   |   |   |   Height > 0.215\
+|   |   |   |   |   Rings <= 18\
+|   |   |   |   |   |   Whole-Weight <= 2.033\
+|   |   |   |   |   |   |   Whole-Weight <= 1.974\
+|   |   |   |   |   |   |   |   Whole-Weight <= 1.569: M (2.0)\
+|   |   |   |   |   |   |   |   Whole-Weight > 1.569: F (7.0)\
+|   |   |   |   |   |   |   Whole-Weight > 1.974: M (3.0)\
+|   |   |   |   |   |   Whole-Weight > 2.033: F (4.0/1.0)\
+|   |   |   |   |   Rings > 18: M (3.0)\
+|   |   Shucked-Weight > 0.873: M (94.0/27.0)\
+\
+Number of Leaves  : 	370\
+\
+Size of the tree : 	739\
+\
+\
+Time taken to build model: 0.38 seconds\
+\
+=== Stratified cross-validation ===\
+=== Summary ===\
+\
+Correctly Classified Instances        2206               52.813  %\
+Incorrectly Classified Instances      1971               47.187  %\
+Kappa statistic                          0.2886\
+Mean absolute error                      0.3405\
+Root mean squared error                  0.4806\
+Relative absolute error                 76.7932 %\
+Root relative squared error            102.0728 %\
+Total Number of Instances             4177     \
+\
+=== Detailed Accuracy By Class ===\
+\
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class\
+                 0.506    0.336    0.465      0.506    0.485      0.168    0.602     0.437     M\
+                 0.376    0.223    0.434      0.376    0.403      0.159    0.626     0.396     F\
+                 0.702    0.156    0.681      0.702    0.691      0.542    0.797     0.606     I\
+Weighted Avg.    0.528    0.243    0.525      0.528    0.525      0.285    0.672     0.479     \
+\
+=== Confusion Matrix ===\
+\
+   a   b   c   <-- classified as\
+ 773 489 266 |   a = M\
+ 641 491 175 |   b = F\
+ 248 152 942 |   c = I\
+\
+}
